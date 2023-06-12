@@ -3,6 +3,40 @@ class ClansCtrl {
       
       }
 
+
+
+
+
+      static performSearch() {
+        const filter = document.getElementById('filter').value;
+        const clanName = document.getElementById('nomClan').value;
+      
+        if (filter === 'name') {
+          // Effectuer une action spécifique pour le tri par nom du clan
+          HttpService.searchClansByName(clanName);
+        } else if (filter === 'members') {
+          // Effectuer une action spécifique pour le tri par nombre de membres
+          // Appeler la fonction correspondante de HttpService
+        } else if (filter === 'score') {
+          // Effectuer une action spécifique pour le tri par score minimum
+          // Appeler la fonction correspondante de HttpService
+        } else {
+          // Aucune option de tri sélectionnée
+          // Afficher un message d'erreur ou effectuer une action par défaut
+        }
+      }
+      
+
+
+
+
+
+
+
+
+
+
+
     static handleFilterChange(value) {
       const filterSection = document.querySelector('.filter-input-section');
   
