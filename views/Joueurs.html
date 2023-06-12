@@ -1,13 +1,23 @@
-<!doctype html>
+    <header>
+        <h1>Joueurs</h1>
+    </header>
 
-<!-- panneau pour la première vue utile (accueil) -->
-<div id="accueil">
-  <div >
-    <h3 id="bienvenue">&nbsp;---------------------</h3>
-  </div>
-  <div>
-    <p>Cette page correspond à l'application principale qu'il faudrait développer.</p>
-    
-    <!-- <p>Pour effectuer un logout, cliquez <a href="#" onclick="accueilCtrl.changeTitre();">ici</a>.</p> -->
-  </div>
-</div>  <!-- fin panneau suite -->
+    <div class="container">
+        <div class="filter-section">
+            <label for="filter">Filtre :</label>
+            <select id="filter">
+                <option value="all">Tous les joueurs</option>
+                <option value="level">Par niveau</option>
+                <option value="clan">Par clan</option>
+                <option value="trophies">Par trophées</option>
+            </select>
+        </div>
+
+        <div id="players-list" class="players-section">
+            <!-- Espace réservé pour afficher les joueurs -->
+        </div>
+    </div>
+
+    <div class="button-section">
+        <button onclick="javascript:indexCtrl.loadMenu();">Retour à l'accueil</button>
+    </div>

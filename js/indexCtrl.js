@@ -5,12 +5,11 @@
 */
 
 $().ready(function () {
-  // service et indexCtrl sont des variables globales qui doivent être accessible depuis partout => pas de mot clé devant ou window.xxx
+  // service et indexCtrl sont des variables globales qui doivent être accessibles depuis partout => pas de mot-clé devant ou window.xxx
   http = new HttpService();
   indexCtrl = new IndexCtrl();  // ctrl principal
   http.centraliserErreurHttp(indexCtrl.afficherErreurHttp);
 });
-
 
 class IndexCtrl {
   constructor() {
@@ -22,19 +21,19 @@ class IndexCtrl {
     alert(msg);
   }
 
-  // avec arrow function
   loadJoueurs() {
-    this.vue.chargerVue("Joueurs", () =>  new JoueursCtrl());
+    this.vue.chargerVue("Joueurs", () => new JoueursCtrl());
   }
 
-  // avec function classique
   loadMenu() {
-    this.vue.chargerVue("Menu", new MenuCtrl());
+    this.vue.chargerVue("Menu", () => new MenuCtrl());
   }
 
-  loadCompte() {
-    this.vue.chargerVue("Cartes", () =>  new CartesCtrl());
+  loadCartes() {
+    this.vue.chargerVue("Cartes", () => new CartesCtrl());
   }
 
+  loadClans() {
+    this.vue.chargerVue("Clans", () => new ClansCtrl());
+  }
 }
-
