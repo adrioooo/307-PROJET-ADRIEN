@@ -8,23 +8,24 @@ class ClansCtrl {
 
 
       static performSearch() {
-        const filter = document.getElementById('filter').value;
-        const clanName = document.getElementById('nomClan').value;
+        //cela ne sert plus a rien... car je ne peux pas filtrer
+       //const filter = document.getElementById('filter').value;
+        //const clanName = document.getElementById('nomClan').value;
       
-        if (filter === 'name') {
+        //if (filter === 'name') {
           // Effectuer une action spécifique pour le tri par nom du clan
-          HttpService.searchClansByName(clanName);
-        } else if (filter === 'members') {
+          HttpService.searchClansByName();
+        //} else if (filter === 'members') {
           // Effectuer une action spécifique pour le tri par nombre de membres
           // Appeler la fonction correspondante de HttpService
-        } else if (filter === 'score') {
+        //} else if (filter === 'score') {
           // Effectuer une action spécifique pour le tri par score minimum
           // Appeler la fonction correspondante de HttpService
-        } else {
+        //} else {
           // Aucune option de tri sélectionnée
           // Afficher un message d'erreur ou effectuer une action par défaut
         }
-      }
+      
       
 
 
@@ -45,17 +46,8 @@ class ClansCtrl {
   
       // Créer les nouveaux éléments de filtrage en fonction du critère sélectionné
       if (value === 'name') {
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.id = 'nomClan';
-        input.placeholder = 'Entrez un nom de clan';
         filterSection.appendChild(input);
-      } else if (value === 'members' || value === 'score') {
-        const input = document.createElement('input');
-        input.type = 'number';
-        input.placeholder = 'Entrez un nombre';
-        filterSection.appendChild(input);
-      }
+      } 
     }
   
     searchClans() {

@@ -1,23 +1,20 @@
 
     <header>
         <h1>Cartes</h1>
+        <div class="button-section">
+            <button id="backButton" onclick="javascript:indexCtrl.loadMenu();">Retour à l'accueil</button>
+        </div>
     </header>
 
     <div class="container">
-        <div class="filter-section">
-            <label for="sort">Trier par :</label>
-            <select id="sort">
-                <option value="rarity">Nom</option>
-                <option value="elixir">level maximum (décroissant)</option>
-            </select>
-        </div>
+        <div class="button-section">
+            <button onclick="HttpService.displayAllCards()">Afficher toutes les cartes</button>
+          </div>
 
         <div id="cards-list" class="cards-section">
             <!-- Espace réservé pour afficher les cartes -->
         </div>
     </div>
 
-    <div class="button-section">
-      <button onclick="javascript:indexCtrl.loadMenu();">Retour à l'accueil</button>
-    </div>
+   
 

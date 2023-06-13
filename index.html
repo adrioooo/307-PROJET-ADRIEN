@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <!-- 
-   But :    
-   Auteur : adrien turberg
-   Date :   05.06.2023/ V1.0 
-   -->
-  
-  <!-- entête de la page -->
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/png" href="images/heheheha.png" />
-      <link rel= "stylesheet" href= "css/main.css" >
-      <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-      <script type="text/javascript" src="js/indexCtrl.js"></script>
-      <script type="text/javascript" src="js/httpService.js"></script>
-      <script type="text/javascript" src="js/vueService.js"></script>
-      <script type="text/javascript" src="js/JoueursCtrl.js"></script>
-      <script type="text/javascript" src="js/CartesCtrl.js"></script>
-      <script type="text/javascript" src="js/MenuCtrl.js"></script>
-      <script type="text/javascript" src="js/ClansCtrl.js"></script>
-      <title>infos Clash Royale</title>
-   </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/heheheha.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://openlayers.org/en/v6.6.1/build/ol.js"></script>
+    <script src="js/indexCtrl.js"></script>
+    <script src="js/httpService.js"></script>
+    <script src="js/vueService.js"></script>
+    <script src="js/JoueursCtrl.js"></script>
+    <script src="js/CartesCtrl.js"></script>
+    <script src="js/MenuCtrl.js"></script>
+    <script src="js/ClansCtrl.js"></script>
+    <script>
+      // Placez ici votre code pour appeler la fonction searchClansByName() de HttpService
+      $(document).ready(function() {
+        HttpService.searchClansByName();
+      });
+    </script>
+    <title>infos Clash Royale</title>
+  </head>
 
-   <body id="backgroundImages">
-      <div id="container">
-          <!-- calque pour les differentes vues -->
-        <div id="view"></div>
-      </div>  <!-- fin du conteneur  -->
-
-   </body>
-
+  <body id="backgroundImages">
+    <div id="container">
+      <div id="view"></div>
+    </div>
+  </body>
 </html>

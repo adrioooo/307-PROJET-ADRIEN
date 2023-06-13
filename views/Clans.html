@@ -1,30 +1,25 @@
     <header>
         <h1>Clans</h1>
+        <div class="button-section">
+            <button id="backButton" onclick="javascript:indexCtrl.loadMenu();">Retour à l'accueil</button>
+        </div>
     </header>
 
     <div class="container">
-        <div class="filter-section">
-            <label for="filter">Trier par :</label>
-            <select id="filter" onchange="ClansCtrl.handleFilterChange(this.value)">
-                <option value="">Sélectionnez un critère de tri</option>
-                <option value="name">Nom du clan</option>
-                <option value="members">Nombre de membres</option>
-                <option value="score">Score minimum</option>
-            </select>
-            <div class="search-button">
-                <button id="searchButton" onclick="ClansCtrl.performSearch()">Rechercher</button>
+        
+            <div class="button-section">
+                <button onclick="ClansCtrl.performSearch()">Clans nommés "test"</button>
           </div>
-        </div>
+       
 
         <div class="filter-input-section"></div>
 
         <div id="clans-list" class="clans-section">
             <!-- Espace réservé pour afficher les clans -->
+
         </div>
     </div>
 
-    <div class="button-section">
-        
-        <button onclick="javascript:indexCtrl.loadMenu();">Retour à l'accueil</button>
-    </div>
+    
+
 

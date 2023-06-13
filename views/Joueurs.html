@@ -1,23 +1,17 @@
-    <header>
-        <h1>Joueurs</h1>
-    </header>
+<header>
+    <h1>Joueurs</h1>
+</header>
 
-    <div class="container">
-        <div class="filter-section">
-            <label for="filter">Filtre :</label>
-            <select id="filter">
-                <option value="all">Tous les joueurs</option>
-                <option value="level">Par niveau</option>
-                <option value="clan">Par clan</option>
-                <option value="trophies">Par trophées</option>
-            </select>
-        </div>
+<div class="container">
+    <input type="text" id="idJoueur" placeholder="Entrez votre identifiant de joueur">
 
-        <div id="players-list" class="players-section">
-            <!-- Espace réservé pour afficher les joueurs -->
-        </div>
+    <div id="players-list" class="players-section">
+        <!-- Espace réservé pour afficher les joueurs -->
     </div>
+</div>
 
-    <div class="button-section">
-        <button onclick="javascript:indexCtrl.loadMenu();">Retour à l'accueil</button>
-    </div>
+<div class="button-section">
+    <button onclick="HttpService.searchPlayer()">Rechercher</button>
+    <button onclick="javascript:indexCtrl.loadMenu();">Retour à l'accueil</button>
+</div>
+
